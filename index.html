@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Advent Pro"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Architects Daughter"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+
+    <title>Formula Sheet</title>
+  </head>
+  <body id="body">
+    <br />
+    <label for="mode">Mode</label>
+    <select name="mode" id="screenMode">
+      <option value="light">Light Mode</option>
+      <option value="dark">Dark Mode</option>
+    </select>
+    <br /><br /><br />
+    <h1 id="header">Formula Sheet</h1>
+
+    <hr style="width: 890px" />
+    <hr />
+    <div class="italic">
+      <table>
+        <!-- Row 1 -->
+        <tr>
+          <td colspan="7">base unit</td>
+        </tr>
+
+        <!-- Row 2 -->
+        <tr>
+          <th colspan="7">
+            <hr />
+            <br />
+          </th>
+        </tr>
+
+        <!-- Row 3 -->
+        <tr>
+          <td>kilo <br /></td>
+          <td>hecto <br /></td>
+          <td>deca <br /></td>
+          <td><br /></td>
+          <td>deci <br /></td>
+          <td>centi <br /></td>
+          <td>mili<br /></td>
+        </tr>
+
+        <!-- Row 4 -->
+        <tr>
+          <td colspan="7">
+            <br /><br /><span class="ni">... for 2 points A</span>(x₁, y₁)
+            <span class="ni">and B</span>(x₂, y₂) ... <br /><br />
+          </td>
+        </tr>
+
+        <!-- Row 5 -->
+        <tr>
+          <td colspan="4"><br />slope(m)=rise/run<br /><br /></td>
+          <td colspan="4">slope(m<span id="sub">AB</span>)= B(x₂, y₂)</td>
+        </tr>
+
+        <!-- Row 6 -->
+        <tr>
+          <td colspan="2">y = mx+b <br /></td>
+          <td colspan="3">
+            <br /><br />
+            y-y₁ = m(x-x₁) <br />
+          </td>
+          <td colspan="2">
+            A<span class="italic">x</span> + B<span class="italic">y</span>
+            <br />
+          </td>
+        </tr>
+
+        <!-- Row 7 -->
+        <tr>
+          <td colspan="4">a² + b² = c² <br /><br /></td>
+          <td colspan="4">c² = a² + b² <br /><br /></td>
+        </tr>
+
+        <!-- Row 8 -->
+        <tr>
+          <td colspan="2"><span class="ni">sin</span>A = opp/hyp</td>
+          <td colspan="3"><span class="ni">cos</span>A = adj/hyp</td>
+          <td colspan="2"><span class="ni">tan</span>A = opp/adj</td>
+        </tr>
+      </table>
+    </div>
+
+    <hr style="width: 890px" />
+    <hr />
+    <h2 id="header2">Conversion Chart</h2>
+    <hr style="width: 800px; border-color: rgb(211, 211, 211)" />
+
+    <table>
+      <!-- Row 1 -->
+      <tr>
+        <th class="bh">Relationships Between Common Imperial Units</th>
+        <th colspan="2" class="bh">
+          Relationships Between Common Imperial Units and Metric Units
+        </th>
+      </tr>
+
+      <!-- Row 2 -->
+
+      <tr>
+        <th class="bh">Length:</th>
+        <th class="bh">Imperial ... to ... SI</th>
+        <th class="bh">SI ... to ... Imperial</th>
+      </tr>
+
+      <!-- Row 3 -->
+      <tr>
+        <td class="bd">
+          inches (in) feet (ft) yards(yd) miles(mi)
+          <br />
+          <ul>
+            <li>
+              <span class="bold">1</span> foot =
+              <span class="bold">12</span> inches
+            </li>
+            <p>
+              <input id="c1" class="n" type="number" placeholder="ft" /><button
+                onclick="c1convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c1op"
+                class="in"
+                type="text"
+                placeholder="in"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> yard =
+              <span class="bold">3</span> feet =
+              <span class="bold">36</span> inches
+            </li>
+            <p>
+              <input id="c2" class="n" type="number" placeholder="yd" /><button
+                onclick="c2convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c2op1"
+                class="in"
+                type="text"
+                placeholder="ft"
+                disabled
+              />
+              =
+              <input
+                id="c2op2"
+                class="in"
+                type="text"
+                placeholder="in"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> mile =
+              <span class="bold">1760</span> yards =
+              <span class="bold">5280</span> feet
+            </li>
+            <p>
+              <input id="c3" class="n" type="number" placeholder="mi" /><button
+                onclick="c3convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c3op1"
+                class="in"
+                type="text"
+                placeholder="yd"
+                disabled
+              />
+              =
+              <input
+                id="c3op2"
+                class="in"
+                type="text"
+                placeholder="ft"
+                disabled
+              />
+            </p>
+          </ul>
+        </td>
+        <td class="bd">
+          <ul>
+            <li>
+              <span class="bold">1</span> inch =
+              <span class="bold">2.54</span>cm
+            </li>
+            <p>
+              <input id="c4" class="n" type="number" placeholder="in" /><button
+                onclick="c4convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <!-- Learned disables attribute from W3Schools -->
+              <input
+                id="c4op"
+                class="in"
+                type="text"
+                placeholder="cm"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> foot =
+              <span class="bold">0.3048</span> m
+            </li>
+            <p>
+              <input id="c5" class="n" type="number" placeholder="ft" /><button
+                onclick="c5convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c5op"
+                class="in"
+                type="text"
+                placeholder="m"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> yard =
+              <span class="bold">0.9144</span> m
+            </li>
+            <p>
+              <input id="c6" class="n" type="number" placeholder="yd" /><button
+                onclick="c6convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c6op"
+                class="in"
+                type="text"
+                placeholder="m"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> mile =
+              <span class="bold">1.609</span> km
+            </li>
+            <p>
+              <input id="c7" class="n" type="number" placeholder="mi" /><button
+                onclick="c7convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c7op"
+                class="in"
+                type="text"
+                placeholder="km"
+                disabled
+              />
+            </p>
+          </ul>
+        </td>
+
+        <td class="bd">
+          <ul>
+            <li>
+              <span class="bold">1</span> cm =
+              <span class="bold">0.3937</span> inches
+            </li>
+            <p>
+              <input id="c8" class="n" type="number" placeholder="cm" /><button
+                onclick="c8convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c8op"
+                class="in"
+                type="text"
+                placeholder="in"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> m =
+              <span class="bold">3.2808</span> feet
+            </li>
+            <p>
+              <input id="c9" class="n" type="number" placeholder="m" /><button
+                onclick="c9convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c9op"
+                class="in"
+                type="text"
+                placeholder="ft"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> m =
+              <span class="bold">1.0936</span> yards
+            </li>
+            <p>
+              <input id="c10" class="n" type="number" placeholder="m" /><button
+                onclick="c10convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c10op"
+                class="in"
+                type="text"
+                placeholder="yd"
+                disabled
+              />
+            </p>
+            <li>
+              <span class="bold">1</span> km =
+              <span class="bold">0.6214</span> miles
+            </li>
+            <p>
+              <input id="c11" class="n" type="number" placeholder="km" /><button
+                onclick="c11convert()"
+                class="btn"
+              >
+                ⏎
+              </button>
+              =
+              <input
+                id="c11op"
+                class="in"
+                type="text"
+                placeholder="mi"
+                disabled
+              />
+            </p>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <hr style="width: 800px; border-color: rgb(211, 211, 211)" />
+
+    <br /><br /><br />
+    <hr style="width: 890px" />
+    <hr />
+
+    <h2 id="header3">Formulas</h2>
+    <hr style="width: 800px; border-color: rgb(211, 211, 211)" />
+    <label for="unit"></label>
+    <select name="unit" id="unitType">
+      <option value="‎ ">‎</option>
+      <option value="mm">mm</option>
+      <option value="cm">cm</option>
+      <option value="in">in</option>
+      <option value="ft">ft</option>
+      <option value="yd">yd</option>
+      <option value="m">m</option>
+      <option value="km">km</option>
+    </select>
+    <table>
+      <!-- Row 1 -->
+      <tr>
+        <td class="fm">
+          <img src="Images/image-removebg-preview.png" alt="Square" />
+        </td>
+        <td class="fm">
+          <img src="Images/image-removebg-preview (1).png" alt="Rectangle" />
+        </td>
+        <td class="fm">
+          <img src="Images/image-removebg-preview (2).png" alt="Triangle" />
+        </td>
+        <td class="fm">
+          <img src="Images/image-removebg-preview (3).png" alt="Circle" />
+        </td>
+      </tr>
+      <!-- Row 2 -->
+      <tr>
+        <td>P= 4s</td>
+        <td>P= 2l + 2w</td>
+        <td>P= s₁ + s₂ + s₃</td>
+        <td>C= 2πr C= πd</td>
+      </tr>
+
+      <!-- Row 3 -->
+      <tr>
+        <td>
+          <input id="f1" class="n" type="number" placeholder="s" /><button
+            onclick="f1calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f1op" class="in" type="text" placeholder="P" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f2-1" class="n" type="number" placeholder="l" /> +
+          <input id="f2-2" class="n" type="number" placeholder="w" /><button
+            onclick="f2calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />=
+          <input id="f2op" class="in" type="text" placeholder="P" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f3-1" class="n" type="number" placeholder="s₁" /> +
+          <input id="f3-2" class="n" type="number" placeholder="s₂" /> +
+          <input id="f3-3" class="n" type="number" placeholder="s₃" /><button
+            onclick="f3calculate()"
+            class="btn"
+          >
+            ⏎</button
+          ><br />
+          =
+          <input id="f3op" class="in" type="text" placeholder="P" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f4" class="n" type="number" placeholder="r" /><button
+            onclick="f4calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f4op" class="in" type="text" placeholder="C" disabled />
+
+          <br />
+
+          <input id="f5" class="n" type="number" placeholder="d" /><button
+            onclick="f5calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f5op" class="in" type="text" placeholder="C" disabled />
+        </td>
+      </tr>
+
+      <!-- Row 4 -->
+      <tr>
+        <td>A = s²</td>
+        <td>A = lw</td>
+        <td>A = ᵇʰ⁄₂</td>
+        <td>A = πr²</td>
+      </tr>
+
+      <!-- Row 5 -->
+      <tr>
+        <td>
+          <input id="f6" class="n" type="number" placeholder="s" /><button
+            onclick="f6calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f6op" class="in" type="text" placeholder="A" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f7-1" class="n" type="number" placeholder="l" /> +
+          <input id="f7-2" class="n" type="number" placeholder="w" /><button
+            onclick="f7calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />=
+          <input id="f7op" class="in" type="text" placeholder="A" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f8-1" class="n" type="number" placeholder="b" /> +
+          <input id="f8-2" class="n" type="number" placeholder="h" /><button
+            onclick="f8calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />=
+          <input id="f8op" class="in" type="text" placeholder="A" disabled />
+        </td>
+        <td>
+          <input id="f9" class="n" type="number" placeholder="r" /><button
+            onclick="f9calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f9op" class="in" type="text" placeholder="A" disabled />
+        </td>
+      </tr>
+
+      <!-- Row 6 -->
+      <tr>
+        <td>
+          <br /><br />
+          <img src="Images/image-removebg-preview (4).png" alt="Cube" />
+        </td>
+        <td>
+          <br /><br />
+          <img src="Images/image-removebg-preview (12).png" alt="Long Cube" />
+        </td>
+        <td>
+          <br /><br />
+          <img src="Images/image-removebg-preview (6).png" alt="Long Pyramid" />
+        </td>
+        <td>
+          <br /><br />
+          <img src="Images/image-removebg-preview (7).png" alt="Pyramid" />
+        </td>
+      </tr>
+
+      <!-- Row 7 -->
+      <tr>
+        <td>SA = 6s²</td>
+        <td>SA = 2lw + 2wh + 2lh</td>
+        <td>SA = lw + ls₁ + ws₂</td>
+        <td>SA = l² + 2ls</td>
+      </tr>
+
+      <!-- Row 8 -->
+      <tr>
+        <td>
+          <input id="f10" class="n" type="number" placeholder="s" /><button
+            onclick="f10calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f10op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f11-1" class="n" type="number" placeholder="l" /> +
+          <input id="f11-2" class="n" type="number" placeholder="w" /> +
+          <input id="f11-3" class="n" type="number" placeholder="h" /><button
+            onclick="f11calculate()"
+            class="btn"
+          >
+            ⏎</button
+          ><br />
+          =
+          <input id="f11op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+        <td>
+          <br /><br />
+          <input id="f12-1" class="n" type="number" placeholder="l" /> +
+          <input id="f12-2" class="n" type="number" placeholder="w" /> +
+          <input id="f12-3" class="n" type="number" placeholder="s₁" />
+          <br />
+          + <input id="f12-4" class="n" type="number" placeholder="s₂" /><button
+            onclick="f12calculate()"
+            class="btn"
+          >
+            ⏎</button
+          ><br />
+          =
+          <input id="f12op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f13-1" class="n" type="number" placeholder="l" /> +
+          <input id="f13-2" class="n" type="number" placeholder="s" /><button
+            onclick="f13calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />=
+          <input id="f13op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+      </tr>
+
+      <!-- Row 9 -->
+      <tr>
+        <td>V = s³</td>
+        <td>V = lwh</td>
+        <td>V = ⅓lwh</td>
+        <td>V = ⅓l²h</td>
+      </tr>
+
+      <!-- Row 10 -->
+      <tr>
+        <td>
+          <input id="f14" class="n" type="number" placeholder="s" /><button
+            onclick="f14calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f14op" class="in" type="text" placeholder="V" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f15-1" class="n" type="number" placeholder="l" /> +
+          <input id="f15-2" class="n" type="number" placeholder="w" /> +
+          <input id="f15-3" class="n" type="number" placeholder="h" /><button
+            onclick="f15calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />
+          =
+          <input id="f15op" class="in" type="text" placeholder="V" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f16-1" class="n" type="number" placeholder="l" /> +
+          <input id="f16-2" class="n" type="number" placeholder="w" /> +
+          <input id="f16-3" class="n" type="number" placeholder="h" /><button
+            onclick="f16calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />
+          =
+          <input id="f16op" class="in" type="text" placeholder="V" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f17-1" class="n" type="number" placeholder="l" /> +
+          <input id="f17-2" class="n" type="number" placeholder="h" /><button
+            onclick="f17calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+
+          <br />=
+          <input id="f17op" class="in" type="text" placeholder="V" disabled />
+        </td>
+      </tr>
+
+      <!-- Row 11 -->
+      <tr>
+        <td>
+          <img src="Images/image-removebg-preview (8).png" alt="Cylinder" />
+        </td>
+        <td><img src="Images/image-removebg-preview (9).png" alt="Cone" /></td>
+        <td>
+          <img src="Images/image-removebg-preview (10).png" alt="Sphere" />
+        </td>
+        <td><img src="Images/image-removebg-preview (11).png" alt="Semi" /></td>
+      </tr>
+
+      <!-- Row 12 -->
+      <tr>
+        <td>SA = 2πr² + 2πrh</td>
+        <td>SA = πr² + πrs</td>
+        <td>SA = 4πr²</td>
+        <td>SA = 3πr²</td>
+      </tr>
+
+      <!-- Row 13 -->
+      <tr>
+        <td>
+          <br />
+          <input id="f18-1" class="n" type="number" placeholder="r" /> +
+          <input id="f18-2" class="n" type="number" placeholder="h" /><button
+            onclick="f18calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+
+          <br />=
+          <input id="f18op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f19-1" class="n" type="number" placeholder="r" /> +
+          <input id="f19-2" class="n" type="number" placeholder="s" /><button
+            onclick="f19calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+
+          <br />=
+          <input id="f19op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+        <td>
+          <input id="f20" class="n" type="number" placeholder="r" /><button
+            onclick="f20calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f20op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+        <td>
+          <input id="f21" class="n" type="number" placeholder="r" /><button
+            onclick="f21calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f21op" class="in" type="text" placeholder="SA" disabled />
+        </td>
+      </tr>
+
+      <!-- Row 14 -->
+      <tr>
+        <td>V = πr²h</td>
+        <td>V = ⅓πr²h</td>
+        <td>V = ⁴⁄₃πr³</td>
+        <td>V = ⅔πr³</td>
+      </tr>
+
+      <!-- Row 15 -->
+      <tr>
+        <td>
+          <br />
+          <input id="f22-1" class="n" type="number" placeholder="r" /> +
+          <input id="f22-2" class="n" type="number" placeholder="h" /><button
+            onclick="f22calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />=
+          <input id="f22op" class="in" type="text" placeholder="V" disabled />
+        </td>
+        <td>
+          <br />
+          <input id="f23-1" class="n" type="number" placeholder="r" /> +
+          <input id="f23-2" class="n" type="number" placeholder="h" /><button
+            onclick="f23calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          <br />=
+          <input id="f23op" class="in" type="text" placeholder="V" disabled />
+        </td>
+        <td>
+          <input id="f24" class="n" type="number" placeholder="r" /><button
+            onclick="f24calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f24op" class="in" type="text" placeholder="V" disabled />
+        </td>
+        <td>
+          <input id="f25" class="n" type="number" placeholder="r" /><button
+            onclick="f25calculate()"
+            class="btn"
+          >
+            ⏎
+          </button>
+          =
+          <input id="f25op" class="in" type="text" placeholder="V" disabled />
+        </td>
+      </tr>
+    </table>
+    <hr style="width: 800px; border-color: rgb(211, 211, 211)" />
+  </body>
+</html>
