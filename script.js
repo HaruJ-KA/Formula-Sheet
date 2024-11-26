@@ -56,11 +56,11 @@ function changeMode() {
     mode.style.color = "#000000";
     document.querySelectorAll(".in").forEach((input) => {
       input.style.background = "#f5f5f5";
-      input.style.color = "#aaadc5";
+      input.style.color = "#000000";
     });
     document.querySelectorAll(".n").forEach((input) => {
       input.style.background = "#ffffff";
-      input.style.color = "#aaadc5";
+      input.style.color = "#000000";
     });
     document.querySelectorAll(".btn").forEach((button) => {
       button.style.background = "#efefef";
